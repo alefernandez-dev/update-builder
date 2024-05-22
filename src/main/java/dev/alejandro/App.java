@@ -6,8 +6,8 @@ public class App
 {
     public static void main( String[] args )
     {
-        Product product = Product.New("EcoTraveler Kit", "A complete set of eco-friendly travel essentials", BigDecimal.valueOf(49.99));
-        Product newProduct = Product
+        var product = Product.New("EcoTraveler Kit", "A complete set of eco-friendly travel essentials", BigDecimal.valueOf(49.99));
+        var updatedProduct = Product
                 .UpdateBuilder
                 .from(product)
                 .withName("GreenExplorer Backpack")
@@ -15,6 +15,6 @@ public class App
                 .withPrice(BigDecimal.valueOf(79.99))
                 .update();
         System.out.println(product);
-        System.out.println(newProduct);
+        System.out.println(updatedProduct);
     }
 }
